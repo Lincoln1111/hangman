@@ -1,6 +1,5 @@
 import random # It seems I can use random.choice() to give the computer a list of words it can use.
 
-
 solution = ["f","u","n"] # I need to figure out how to have this be a random word.
 word = ["_" for letter in solution]
 
@@ -41,19 +40,3 @@ while word != solution:
         break
 if word == solution:
     print("you did it!") # How to make it ask the user if they want to play again and run through the program with a different word?
-
-
-# This is a good step in the right direction...
-
-# Now I want to figure out how to count the wrong guesses.
-    # ok now to correspond wrong guesses to body parts:
-    # 1 = head. 
-    # 2 = head + body.
-    # 3 = head + body + arms.
-    # 4 = head + body + arms + legs = game over.
-
-
-# It's coming along, daggum! I haven't even googled anything yet...
-# It's pretty satisfactory so far...
-
-# hmm...I wonder if I can use a list comprehension to make word from solution...let's see...ok got it.
