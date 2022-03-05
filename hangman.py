@@ -1,7 +1,7 @@
 import random # It seems I can use random.choice() to give the computer a list of words it can use.
 
 
-solution = ["f","u","n"] # I need to figure out how to have this be a random word. first google search, get some!
+solution = ["f","u","n"] # I need to figure out how to have this be a random word.
 word = ["_" for letter in solution]
 
 print("welcome to hangman.")
