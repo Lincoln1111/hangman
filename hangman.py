@@ -1,7 +1,7 @@
 import random # It seems I can use random.choice() and give the computer a list of words it can use.
 
 
-solution = ["h","i","t","s"] # I need to figure out how to have this be a random word.
+solution = ["h","i","s","s"] # I need to figure out how to have this be a random word.
 word = ["_" for letter in solution]
 
 print("Welcome to hangman.")
@@ -14,12 +14,15 @@ else: print("bye") # The program still runs after this point...
 wrong_guesses = 0
 while word != solution:
     guess = input("pick a letter: ")
-    if guess in solution:
-        for i in solution:
-            if i == guess:
-                word[solution.index(i)] = guess
-                print(word)
-    else:
+
+    i = 0
+    while guess in solution and i < len(solution):
+        if guess == solution[i]:
+            word[i] = guess
+        i += 1
+    print(word)
+
+    if guess not in solution:
         print("wrong")
         wrong_guesses += 1
 
