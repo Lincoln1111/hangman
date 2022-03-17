@@ -8,7 +8,7 @@ print("Welcome to hangman.")
 
 greeting = input("Are you ready to play?(y/n) ")
 if greeting == "y":
-    print(word)
+    print(" ".join(word))
 else: print("bye") # The program still runs after this point...
 
 wrong_guesses = 0
@@ -20,7 +20,7 @@ while word != solution:
         if guess == solution[i]:
             word[i] = guess
         i += 1
-    print(word)
+    print(" ".join(word))
 
     if guess not in solution:
         print("wrong")
@@ -38,7 +38,7 @@ while word != solution:
         print(f"the hangman is: {the_hanged(wrong_guesses)}. {4 - wrong_guesses} guesses remaining.") 
 
     if wrong_guesses == 4: # I wonder if I could give the user a certain number of guesses based on how long the word is...
-        print(f"you lose. the word was {solution}.")
+        print(f"you lose. the word was {''.join(solution)}.")
         break
 
 if word == solution:
