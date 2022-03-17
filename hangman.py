@@ -1,6 +1,5 @@
 import random # It seems I can use random.choice() and give the computer a list of words it can use.
 
-
 solution = ["h","i","s","s"] # I need to figure out how to have this be a random word.
 word = ["_" for letter in solution]
 
@@ -9,7 +8,7 @@ print("Welcome to hangman.")
 greeting = input("Are you ready to play?(y/n) ")
 if greeting == "y":
     print(" ".join(word))
-else: print("bye") # The program still runs after this point...
+else: print("bye"); exit()
 
 wrong_guesses = 0
 while word != solution:
@@ -38,7 +37,7 @@ while word != solution:
         print(f"the hangman is: {the_hanged(wrong_guesses)}. {4 - wrong_guesses} guesses remaining.") 
 
     if wrong_guesses == 4: # I wonder if I could give the user a certain number of guesses based on how long the word is...
-        print(f"you lose. the word was {''.join(solution)}.")
+        print(f"you lose. the word was \"{''.join(solution)}.\"")
         break
 
 if word == solution:
