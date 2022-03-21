@@ -1,6 +1,7 @@
-import random # It seems I can use random.choice() and give the computer a list of words it can use.
+from random import choice
+from words import potential_solutions
 
-solution = ["h","i","s","s"] # I need to figure out how to have this be a random word.
+solution = list(choice(potential_solutions))
 word = ["_" for letter in solution]
 
 print("Welcome to hangman.")
