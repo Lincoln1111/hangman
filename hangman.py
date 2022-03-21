@@ -23,8 +23,12 @@ while word != solution:
     print(" ".join(word))
 
     if guess not in solution:
-        print("wrong")
+        print("WRONG.")
         wrong_guesses += 1
+        
+        incorrect_guesses = []
+        incorrect_guesses.append(guess)
+        print(f"You've guessed: {incorrect_guesses}")
 
         def the_hanged(wrong_guesses):
             body = {
@@ -35,10 +39,10 @@ while word != solution:
             }
             return body[wrong_guesses]
 
-        print(f"the hangman is: {the_hanged(wrong_guesses)}. {4 - wrong_guesses} guesses remaining.") 
+        print(f"The hangman is: {the_hanged(wrong_guesses)}. {4 - wrong_guesses} guesses remaining.") 
 
     if wrong_guesses == 4: # I wonder if I could give the user a certain number of guesses based on how long the word is...
-        print(f"you lose. the word was \"{''.join(solution)}.\"")
+        print(f"You lose. the word was \"{''.join(solution)}.\"")
         break
 
 if word == solution:
