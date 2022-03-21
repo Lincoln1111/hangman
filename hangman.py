@@ -12,6 +12,7 @@ if greeting == "y":
 else: print("bye"); exit()
 
 wrong_guesses = 0
+incorrect_guesses = []
 while word != solution:
     guess = input("pick a letter: ")
 
@@ -25,8 +26,7 @@ while word != solution:
     if guess not in solution:
         print("WRONG.")
         wrong_guesses += 1
-        
-        incorrect_guesses = []
+ 
         incorrect_guesses.append(guess)
         print(f"You've guessed: {incorrect_guesses}")
 
